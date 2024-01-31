@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="{{ asset('css/style5.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-  
+
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -80,7 +80,7 @@
   }
     </style>
 
-    
+
     <!-- Custom styles for this template -->
     <link href="{{ asset('css/sidebars.css') }}" rel="stylesheet">
   </head>
@@ -103,10 +103,10 @@
     <div class="list-group list-group-flush border-bottom scrollarea mb-5">
 
 
-      @foreach ( $adminposts as $adminpost )       
-      <div class="px-3 py-3" style="">          
+      @foreach ( $adminposts as $adminpost )
+      <div class="px-3 py-3" style="">
           <div class="card" style="width: 18rem; background-color: rgb(224, 224, 224);">
-              <img src="{{ asset('uploads/photos/' . $adminpost->photo) }}" class="card-img-top img-fluid" alt="..."> 
+              <img src="{{ asset('uploads/photos/' . $adminpost->photo) }}" class="card-img-top img-fluid" alt="...">
               <div class="card-body">
                   <h5 class="card-title text-bold">{{ $adminpost->title }} </h5>
                   <p class="card-text">{{ $adminpost->comments }}</p>
@@ -146,31 +146,31 @@
       @if (session('status'))
         <h6 class="alert alert-success">{{ session('status') }}</h6>
       @endif
-    
+
       <form action="{{ route('post') }}" method="POST" enctype="multipart/form-data">
         @csrf
-    
+
         <div class="mb-3">
           <label for="title" class="form-label">Titre du poste</label>
           <input type="text" class="form-control" id="title" name="title" aria-describedby="titleHelp" required>
           <div id="titleHelp" class="form-text">Un titre en référence avec votre ce que vous voulez poster</div>
         </div>
-    
+
         <div class="mb-3">
           <label for="comments" class="form-label">Votre commentaire</label>
           <textarea class="form-control" id="comments" name="comments" rows="3" required></textarea>
           <div id="titleHelp" class="form-text">Un commentaire descriptif de votre post</div>
         </div>
-    
+
         <div class="mb-4">
           <label for="photo" class="form-label">Choisir une photo</label>
           <input type="file" class="form-control" name="photo" id="photo" required>
         </div>
-    
+
         <button type="submit" class="btn btn-primary mb-3">Poster une réalisation</button>
       </form>
     </div>
-    
+
 
 </main>
 
@@ -185,16 +185,16 @@
         function toggleContainers() {
           var containers = document.querySelector('.containers');
           var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-      
+
           // Ajoutez cette condition pour ne rien faire si la largeur de l'écran dépasse 1000px
           if (viewportWidth > 1000) {
             return;
           }
-      
+
           containers.classList.toggle('centered-container');
           containers.style.display = (containers.style.display === 'none' || containers.style.display === '') ? 'block' : 'none';
         }
-      
+
         // Modifiez votre formulaire pour masquer la boîte "containers" après la soumission
         document.querySelector('form').addEventListener('submit', function() {
           var containers = document.querySelector('.containers');

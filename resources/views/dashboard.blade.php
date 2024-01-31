@@ -28,7 +28,7 @@
         </div>
 
         <div class="text-primary text-center my-5 ">
-            © Ray Ague, +22960932967, <a href="rayague03@gmail.com">rayague@gmail.com</a>.
+            © Ray Ague, +22960932967, <a href="mailto:rayague03@gmail.com">rayague@gmail.com</a>.
         </div>
     </div>
 </x-app-layout>

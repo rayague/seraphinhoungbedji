@@ -15,7 +15,7 @@
                 @foreach($adminpost as $adminposts)
                     <div class="col-md-4 mb-4">
                         <div class="card shadow" style="background-color: rgb(224, 224, 224);">
-                            <img src="{{ asset('uploads/photos/' . $adminposts->photo) }}" class="card-img-top img-container" alt="..."> 
+                            <img src="{{ asset('uploads/photos/' . $adminposts->photo) }}" class="card-img-top img-container" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">{{ $adminposts->title }}</h5>
                                 <p class="card-text">{{ $adminposts->comments }}</p>
